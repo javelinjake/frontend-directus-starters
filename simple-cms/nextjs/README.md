@@ -45,6 +45,27 @@ Directus Draft Mode out of the box, enabling live previews of unpublished or dra
   security reasons. For a smooth preview experience, deploy the application to a cloud environment and use the
   deployment URL for Directus previews.
 
+### **Admin Bar**
+
+Allows authenticated users to easily navigate to their **Directus instance** to edit or create pages and posts directly
+from the frontend.
+
+#### How It Works
+
+By appending `?preview=true` to the URL, users enter **Admin Mode**, which:
+
+- Displays an admin bar at the top of the page.
+- Allows easy navigation to **edit** or **create** new posts/pages in Directus.
+- Requires authentication to access edit and new content buttons.
+
+#### Usage
+
+To enable the **Admin Bar**, simply append `?preview=true` to any URL:
+
+```plaintext
+https://yourwebsite.com/blog/some-post?preview=true
+```
+
 ---
 
 ## **Getting Started**
