@@ -109,6 +109,7 @@ defineProps<PricingCardProps>();
 				"
 				:label="card.button.label"
 				:variant="card.button.variant"
+				class="w-full"
 			/>
 		</div>
 	</div>
