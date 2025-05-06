@@ -2,6 +2,7 @@
 import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
 import vercel from '@astrojs/vercel';
+import tailwindcss from '@tailwindcss/vite';
 
 const directusUrl = process.env.NEXT_PUBLIC_DIRECTUS_URL || process.env.DIRECTUS_URL || '';
 const directusHost = directusUrl?.split('//')[1];
@@ -30,5 +31,6 @@ export default defineConfig({
   vite: {
     envPrefix: ['PUBLIC_', 'DIRECTUS_'],
     assetsInclude: ['**/*.svg'],
+    plugins: [tailwindcss()],
   },
 });
