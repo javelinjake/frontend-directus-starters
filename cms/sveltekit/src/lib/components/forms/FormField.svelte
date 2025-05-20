@@ -11,7 +11,7 @@
 	import FileUploadField from './fields/FileUploadField.svelte';
 	import { cn } from '$lib/utils';
 	import * as Tooltip from '$lib/components/ui/tooltip/index.js';
-	import { Info } from 'lucide-svelte';
+	import { Info } from '@lucide/svelte';
 	import { Label } from '$lib/components/ui/label/index.js';
 
 	interface FieldProps {
@@ -37,7 +37,7 @@
 </script>
 
 {#if field.type !== 'hidden'}
-	<div class={`flex flex-shrink-0 flex-col justify-center ${widthClass}`}>
+	<div class={`flex shrink-0 flex-col justify-center ${widthClass}`}>
 		<Form.Field {form} name={field.name!}>
 			<Form.Control>
 				<Form.Label

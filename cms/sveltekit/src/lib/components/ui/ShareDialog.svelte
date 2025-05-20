@@ -1,6 +1,6 @@
 <script lang="ts">
 	import * as Dialog from '$lib/components/ui/dialog/index.js';
-	import { Copy, Share } from 'lucide-svelte';
+	import { Copy, Share } from '@lucide/svelte';
 	import Button from './button/button.svelte';
 	import { Label } from './label';
 	import { Input } from './input';
@@ -50,7 +50,7 @@
 					href={social.url}
 					target="_blank"
 					rel="noopener noreferrer"
-					class="inline-flex items-center justify-center rounded bg-transparent transition-colors hover:opacity-70"
+					class="inline-flex items-center justify-center rounded-sm bg-transparent transition-colors hover:opacity-70"
 				>
 					<img
 						src={social.icon}
