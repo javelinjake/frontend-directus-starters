@@ -16,6 +16,7 @@ export default defineNuxtConfig({
 		'@nuxtjs/seo',
 		'@nuxt/scripts',
 		'@vueuse/nuxt',
+		'@nuxt/fonts',
 		'nuxt-security',
 		'shadcn-nuxt',
 		'@nuxt/icon',

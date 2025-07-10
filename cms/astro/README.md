@@ -39,8 +39,7 @@ Directus Draft Mode out of the box, enabling live previews of unpublished or dra
 [Directus Live Preview](https://docs.directus.io/guides/headless-cms/live-preview/nextjs.html)
 
 - The live preview feature works seamlessly on deployed environments.
-- To preview content on **localhost**, use your browser's preview mode or deploy your application to a staging
-  environment.
+- To preview content on **localhost**, deploy your application to a staging environment.
 - **Important Note**: Directus employs Content Security Policies (CSPs) that block live previews on `localhost` for
   security reasons. For a smooth preview experience, deploy the application to a cloud environment and use the
   deployment URL for Directus previews.
@@ -63,6 +62,29 @@ For instructions on setting up Directus, choose one of the following:
 
 - [Setting up Directus Cloud](https://github.com/directus-labs/starters?tab=readme-ov-file#using-directus-with-a-cloud-instance-recommended)
 - [Setting up Directus Self-Hosted](https://github.com/directus-labs/starters?tab=readme-ov-file#using-directus-locally)
+- 
+## 🚀 One-Click Deploy
+
+You can instantly deploy this template using Vercel:
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/directus-labs/starters/tree/main/cms/astro&env=PUBLIC_DIRECTUS_URL,PUBLIC_SITE_URL,DIRECTUS_PUBLIC_TOKEN,PUBLIC_ENABLE_VISUAL_EDITING)
+
+> ⚡️ **This Astro starter is pre-configured for Vercel.**
+>
+> To deploy on Netlify:
+> 1. Run: `pnpm add -D @astrojs/netlify`
+> 2. In `astro.config.mjs`, swap the adapter lines:
+>    ```js
+>    import netlify from '@astrojs/netlify';
+>    // import vercel from '@astrojs/vercel/serverless';
+>
+>    export default defineConfig({
+>      output: "static",
+>      adapter: netlify(),
+>    });
+>    ```
+> 3. Commit and redeploy manually.
+
 
 ### **Environment Variables**
 
