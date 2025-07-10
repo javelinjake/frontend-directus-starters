@@ -2,11 +2,13 @@ import 'dotenv/config';
 import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
 import vercel from '@astrojs/vercel';
+import tailwindcss from '@tailwindcss/vite';
 import { fetchRedirects } from './src/lib/fetchRedirects';
 
 const directusUrl = process.env.PUBLIC_DIRECTUS_URL || process.env.DIRECTUS_URL || '';
 const directusHost = directusUrl?.split('//')[1];
-const siteUrl = process.env.PUBLIC_SITE_URL || 'http://localhost:4321';
+
+const siteUrl = process.env.PUBLIC_SITE_URL || 'http://localhost:3000';
 
 if (!directusUrl) {
   throw new Error(
@@ -29,6 +31,9 @@ export default defineConfig({
   site: siteUrl,
   adapter: vercel(),
   integrations: [react()],
+  server: {
+    port: 3000,
+  },
   image: {
     remotePatterns: [
       {
@@ -49,5 +54,6 @@ export default defineConfig({
   vite: {
     envPrefix: ['PUBLIC_', 'DIRECTUS_'],
     assetsInclude: ['**/*.svg'],
+    plugins: [tailwindcss()],
   },
 });
